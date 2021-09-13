@@ -1,0 +1,143 @@
+{
+	"asset": {
+		"generator": "Unity 2020.3.11f1",
+		"extras": {
+			"exporterVersion" : "2.2.1"
+		},
+		"version": "2.0"
+	},
+	"accessors": [
+		{
+			"bufferView": 2,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 2518,
+			"max": [ 26.67972, 82.13882, 32.64257 ],
+			"min": [ -31.94906, -1.986592, -32.09118 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 2,
+			"byteOffset": 30216,
+			"componentType": 5126,
+			"count": 2518,
+			"max": [ 0.9999092, 0.999585, 0.9993906 ],
+			"min": [ -0.9990734, -0.9998525, -0.9926122 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 1,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 2518,
+			"max": [ 0.9999225, 0.9997857 ],
+			"min": [ 7.758127E-05, 7.758127E-05 ],
+			"type": "VEC2"
+		},
+		{
+			"bufferView": 3,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 2518,
+			"max": [ 0.9989579, 0.9994685, 0.9992447, 1 ],
+			"min": [ -0.9998037, -0.9995298, -0.9999505, 1 ],
+			"type": "VEC4"
+		},
+		{
+			"bufferView": 0,
+			"byteOffset": 0,
+			"componentType": 5123,
+			"count": 12750,
+			"max": [ 2517 ],
+			"min": [ 0 ],
+			"type": "SCALAR"
+		}
+	],
+	"buffers": [
+		{
+			"byteLength": 146364,
+			"uri": "entity24968.bin"
+		}
+	],
+	"bufferViews": [
+		{
+			"buffer": 0,
+			"byteLength": 25500,
+			"target": 34963,
+			"byteOffset": 120864
+		},
+		{
+			"buffer": 0,
+			"byteLength": 20144,
+			"target": 34962,
+			"byteStride": 8,
+			"byteOffset": 0
+		},
+		{
+			"buffer": 0,
+			"byteLength": 60432,
+			"target": 34962,
+			"byteStride": 12,
+			"byteOffset": 20144
+		},
+		{
+			"buffer": 0,
+			"byteLength": 40288,
+			"target": 34962,
+			"byteStride": 16,
+			"byteOffset": 80576
+		}
+	],
+	"materials": [
+		{
+			"pbrMetallicRoughness": {
+				"baseColorFactor": [0.4, 0.4, 0.4, 1],
+				"metallicFactor": 0,
+				"roughnessFactor": 1
+			},
+			"emissiveFactor": [0, 0, 0],
+			"doubleSided": false,
+			"name": "Collider_Mat"
+		}
+	],
+	"meshes": [
+		{
+			"name": "mesh_Tree_collider_22908Tree_collider",
+			"primitives": [
+				{
+					"attributes": {
+						"POSITION": 0,
+						"NORMAL": 1,
+						"TEXCOORD_0": 2,
+						"TANGENT": 3
+					},
+					"indices": 4,
+					"material": 0,
+					"mode": 4
+				}
+			]
+		}
+	],
+	"nodes": [
+		{
+			"name": "UnityGlTF_root",
+			"children": [
+				1
+			]
+		},
+		{
+			"name": "node_Tree_collider",
+			"mesh": 0,
+			"matrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
+		}
+	],
+	"scenes": [
+		{
+			"name":"defaultScene",
+			"nodes": [
+				0
+			]
+		}
+	],
+	"scene": 0
+}

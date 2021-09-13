@@ -1,0 +1,170 @@
+{
+	"asset": {
+		"generator": "Unity 2020.3.11f1",
+		"extras": {
+			"exporterVersion" : "2.2.1"
+		},
+		"version": "2.0"
+	},
+	"accessors": [
+		{
+			"bufferView": 2,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 216,
+			"max": [ 1.390654, 2.622145, 1.390654 ],
+			"min": [ -1.390654, -0.02418119, -1.390654 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 2,
+			"byteOffset": 2592,
+			"componentType": 5126,
+			"count": 216,
+			"max": [ 0.9951808, 1, 0.9951808 ],
+			"min": [ -0.9951808, -1, -0.9951808 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 1,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 216,
+			"max": [ 0.8934345, 0.9476669 ],
+			"min": [ 0.1166359, 0.2132168 ],
+			"type": "VEC2"
+		},
+		{
+			"bufferView": 3,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 216,
+			"max": [ 0.2452542, 0.7718344, 0.9994287, 1 ],
+			"min": [ -0.9995196, -0.8843163, -0.999972, -1 ],
+			"type": "VEC4"
+		},
+		{
+			"bufferView": 0,
+			"byteOffset": 0,
+			"componentType": 5123,
+			"count": 888,
+			"max": [ 215 ],
+			"min": [ 0 ],
+			"type": "SCALAR"
+		}
+	],
+	"buffers": [
+		{
+			"byteLength": 12144,
+			"uri": "entity29898.bin"
+		}
+	],
+	"bufferViews": [
+		{
+			"buffer": 0,
+			"byteLength": 1776,
+			"target": 34963,
+			"byteOffset": 10368
+		},
+		{
+			"buffer": 0,
+			"byteLength": 1728,
+			"target": 34962,
+			"byteStride": 8,
+			"byteOffset": 0
+		},
+		{
+			"buffer": 0,
+			"byteLength": 5184,
+			"target": 34962,
+			"byteStride": 12,
+			"byteOffset": 1728
+		},
+		{
+			"buffer": 0,
+			"byteLength": 3456,
+			"target": 34962,
+			"byteStride": 16,
+			"byteOffset": 6912
+		}
+	],
+	"images": [
+		{
+			"uri": "Assets/Visuals/Materials/Textures/polygonal mind logo plus text 1.png"
+		}
+	],
+	"materials": [
+		{
+			"pbrMetallicRoughness": {
+				"baseColorTexture" : {
+					"index" : 0,
+					"texCoord" : 0
+				},
+				"baseColorFactor": [1, 1, 1, 1],
+				"metallicFactor": 0,
+				"roughnessFactor": 1
+			},
+			"emissiveTexture" : {
+				"index" : 0,
+				"texCoord" : 0
+			},
+			"emissiveFactor": [0.1902075, 0.1902075, 0.1902075],
+			"doubleSided": false,
+			"name": "PM_Logo_Mat"
+		}
+	],
+	"meshes": [
+		{
+			"name": "mesh_PM_Logo_22672PM_Logo_Art",
+			"primitives": [
+				{
+					"attributes": {
+						"POSITION": 0,
+						"NORMAL": 1,
+						"TEXCOORD_0": 2,
+						"TANGENT": 3
+					},
+					"indices": 4,
+					"material": 0,
+					"mode": 4
+				}
+			]
+		}
+	],
+	"nodes": [
+		{
+			"name": "UnityGlTF_root",
+			"children": [
+				1
+			]
+		},
+		{
+			"name": "node_PM_Logo_Art",
+			"mesh": 0,
+			"matrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
+		}
+	],
+	"samplers": [
+		{
+			"magFilter": 9729,
+			"minFilter": 9985,
+			"wrapS": 10497,
+			"wrapT": 10497
+		}
+	],
+	"scenes": [
+		{
+			"name":"defaultScene",
+			"nodes": [
+				0
+			]
+		}
+	],
+	"scene": 0,
+	"textures": [
+		{
+			"sampler": 0,
+			"source": 0
+		}
+	]
+}

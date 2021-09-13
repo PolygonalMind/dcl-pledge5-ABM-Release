@@ -1,0 +1,512 @@
+{
+	"asset": {
+		"generator": "Unity 2020.3.11f1",
+		"extras": {
+			"exporterVersion" : "2.2.1"
+		},
+		"version": "2.0"
+	},
+	"accessors": [
+		{
+			"bufferView": 3,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 1286,
+			"max": [ 0.5887212, 3.033861, 2.565578E-05 ],
+			"min": [ -0.5887212, 1.674381, -0.1754962 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 3,
+			"byteOffset": 15432,
+			"componentType": 5126,
+			"count": 1286,
+			"max": [ 1, 1, 1 ],
+			"min": [ -1, -1, -1 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 2,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 1286,
+			"max": [ 0.983459, 0.8862214 ],
+			"min": [ 0.0001679297, 0.0001679297 ],
+			"type": "VEC2"
+		},
+		{
+			"bufferView": 4,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 1286,
+			"max": [ 1, 1, 1, 1 ],
+			"min": [ -1, -1, -1, -1 ],
+			"type": "VEC4"
+		},
+		{
+			"bufferView": 0,
+			"byteOffset": 0,
+			"componentType": 5123,
+			"count": 2166,
+			"max": [ 1285 ],
+			"min": [ 0 ],
+			"type": "SCALAR"
+		},
+		{
+			"bufferView": 1,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 119,
+			"max": [ 3.933334 ],
+			"min": [ 0 ],
+			"type": "SCALAR"
+		},
+		{
+			"bufferView": 5,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 119,
+			"max": [ 3.814697E-08, 2.355755, -0.1134413 ],
+			"min": [ 3.814697E-08, 2.355755, -0.1134413 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 6,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 119,
+			"max": [ 0, 0, 0.9993218, 1.000002 ],
+			"min": [ 0, 0, 0, -1.000404 ],
+			"type": "VEC4"
+		},
+		{
+			"bufferView": 5,
+			"byteOffset": 1428,
+			"componentType": 5126,
+			"count": 119,
+			"max": [ 1, 1, 1 ],
+			"min": [ 1, 1, 1 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 3,
+			"byteOffset": 30864,
+			"componentType": 5126,
+			"count": 18,
+			"max": [ 0.8660254, 1, -1.251305E-09 ],
+			"min": [ -0.8660255, -0.9999999, -1.251305E-09 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 3,
+			"byteOffset": 31080,
+			"componentType": 5126,
+			"count": 18,
+			"max": [ 0, 0, -1 ],
+			"min": [ 0, 0, -1 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 2,
+			"byteOffset": 10288,
+			"componentType": 5126,
+			"count": 18,
+			"max": [ 0.950791, 0.7597447 ],
+			"min": [ 0.07515451, 0.0005550385 ],
+			"type": "VEC2"
+		},
+		{
+			"bufferView": 4,
+			"byteOffset": 20576,
+			"componentType": 5126,
+			"count": 18,
+			"max": [ 0.867013, 0.9999981, 0, 1 ],
+			"min": [ -0.867013, -0.9999981, 0, 1 ],
+			"type": "VEC4"
+		},
+		{
+			"bufferView": 0,
+			"byteOffset": 4332,
+			"componentType": 5123,
+			"count": 18,
+			"max": [ 17 ],
+			"min": [ 0 ],
+			"type": "SCALAR"
+		},
+		{
+			"bufferView": 3,
+			"byteOffset": 31296,
+			"componentType": 5126,
+			"count": 18,
+			"max": [ 0.757051, 0.8741672, -5.956442E-09 ],
+			"min": [ -0.7570511, -0.8741671, -5.956442E-09 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 3,
+			"byteOffset": 31512,
+			"componentType": 5126,
+			"count": 18,
+			"max": [ 0, 0, -1 ],
+			"min": [ 0, 0, -1 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 2,
+			"byteOffset": 10432,
+			"componentType": 5126,
+			"count": 18,
+			"max": [ 1.306546, 0.6792401 ],
+			"min": [ -0.2917723, -0.706526 ],
+			"type": "VEC2"
+		},
+		{
+			"bufferView": 4,
+			"byteOffset": 20864,
+			"componentType": 5126,
+			"count": 18,
+			"max": [ 0.867013, 0.9999981, 0, 1 ],
+			"min": [ -0.867013, -0.9999981, 0, 1 ],
+			"type": "VEC4"
+		},
+		{
+			"bufferView": 0,
+			"byteOffset": 4368,
+			"componentType": 5123,
+			"count": 18,
+			"max": [ 17 ],
+			"min": [ 0 ],
+			"type": "SCALAR"
+		},
+		{
+			"bufferView": 3,
+			"byteOffset": 31728,
+			"componentType": 5126,
+			"count": 101,
+			"max": [ 0.2691556, 2.623277, -0.1705128 ],
+			"min": [ -0.2691554, 2.084966, -0.2488985 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 3,
+			"byteOffset": 32940,
+			"componentType": 5126,
+			"count": 101,
+			"max": [ 0.878484, 0.8784967, -0.4777484 ],
+			"min": [ -0.8784967, -0.878484, -1 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 2,
+			"byteOffset": 10576,
+			"componentType": 5126,
+			"count": 101,
+			"max": [ 0.6833563, 0.7967913 ],
+			"min": [ 0.4916804, 0.6051154 ],
+			"type": "VEC2"
+		},
+		{
+			"bufferView": 4,
+			"byteOffset": 21152,
+			"componentType": 5126,
+			"count": 101,
+			"max": [ -0.4777484, 0.01449896, 0.8784967, 1 ],
+			"min": [ -1, -0.01449913, -0.878484, 1 ],
+			"type": "VEC4"
+		},
+		{
+			"bufferView": 0,
+			"byteOffset": 4404,
+			"componentType": 5123,
+			"count": 540,
+			"max": [ 100 ],
+			"min": [ 0 ],
+			"type": "SCALAR"
+		}
+	],
+	"animations": [
+		{
+			"name": "Teleporter_VIP_Art",
+			"channels": [
+				{
+					"sampler": 0,
+					"target": {
+						"node": 2,
+						"path": "translation"
+					}
+				},
+				{
+					"sampler": 1,
+					"target": {
+						"node": 2,
+						"path": "rotation"
+					}
+				},
+				{
+					"sampler": 2,
+					"target": {
+						"node": 2,
+						"path": "scale"
+					}
+				}
+			],
+			"samplers": [
+				{
+					"input": 5,
+					"interpolation": "LINEAR",
+					"output": 6
+				},
+				{
+					"input": 5,
+					"interpolation": "LINEAR",
+					"output": 7
+				},
+				{
+					"input": 5,
+					"interpolation": "LINEAR",
+					"output": 8
+				}
+			]
+		}
+	],
+	"buffers": [
+		{
+			"byteLength": 79024,
+			"uri": "entity24930.bin"
+		}
+	],
+	"bufferViews": [
+		{
+			"buffer": 0,
+			"byteLength": 5484,
+			"target": 34963,
+			"byteOffset": 68780
+		},
+		{
+			"buffer": 0,
+			"byteLength": 476,
+			"byteOffset": 0
+		},
+		{
+			"buffer": 0,
+			"byteLength": 11384,
+			"target": 34962,
+			"byteStride": 8,
+			"byteOffset": 476
+		},
+		{
+			"buffer": 0,
+			"byteLength": 34152,
+			"target": 34962,
+			"byteStride": 12,
+			"byteOffset": 11860
+		},
+		{
+			"buffer": 0,
+			"byteLength": 22768,
+			"target": 34962,
+			"byteStride": 16,
+			"byteOffset": 46012
+		},
+		{
+			"buffer": 0,
+			"byteLength": 2856,
+			"byteStride": 12,
+			"byteOffset": 74264
+		},
+		{
+			"buffer": 0,
+			"byteLength": 1904,
+			"byteStride": 16,
+			"byteOffset": 77120
+		}
+	],
+	"images": [
+		{
+			"uri": "Assets/Visuals/Materials/Textures/Teleport_Albedo.png"
+		},
+		{
+			"uri": "Assets/Visuals/Materials/Textures/AltarHolo_Albedo.png"
+		},
+		{
+			"uri": "Assets/Visuals/Materials/Textures/PlatformBarrier_albedo.png"
+		}
+	],
+	"materials": [
+		{
+			"pbrMetallicRoughness": {
+				"baseColorTexture" : {
+					"index" : 0,
+					"texCoord" : 0
+				},
+				"baseColorFactor": [1, 1, 1, 1],
+				"metallicFactor": 0,
+				"roughnessFactor": 1
+			},
+			"emissiveFactor": [0, 0, 0],
+			"doubleSided": false,
+			"name": "Teleport"
+		},
+		{
+			"pbrMetallicRoughness": {
+				"baseColorTexture" : {
+					"index" : 1,
+					"texCoord" : 0
+				},
+				"baseColorFactor": [0.8, 0.8, 0.8, 1],
+				"metallicFactor": 0,
+				"roughnessFactor": 1
+			},
+			"alphaMode": "BLEND",
+			"alphaCutoff": 0.5,
+			"emissiveFactor": [0, 0, 0],
+			"doubleSided": false,
+			"name": "AltarHolo_Mat"
+		},
+		{
+			"pbrMetallicRoughness": {
+				"baseColorTexture" : {
+					"index" : 2,
+					"texCoord" : 0
+				},
+				"baseColorFactor": [0.8, 0.8, 0.8, 1],
+				"metallicFactor": 0,
+				"roughnessFactor": 1
+			},
+			"alphaMode": "BLEND",
+			"alphaCutoff": 0.5,
+			"emissiveFactor": [0, 0, 0],
+			"doubleSided": false,
+			"name": "PlatformBarrier_Mat"
+		}
+	],
+	"meshes": [
+		{
+			"name": "mesh_TeleporterVIP_Base_23338Teleporter_VIP_Art",
+			"primitives": [
+				{
+					"attributes": {
+						"POSITION": 0,
+						"NORMAL": 1,
+						"TEXCOORD_0": 2,
+						"TANGENT": 3
+					},
+					"indices": 4,
+					"material": 0,
+					"mode": 4
+				}
+			]
+		},
+		{
+			"name": "mesh_Flower_Anim_23328Flower_Anim",
+			"primitives": [
+				{
+					"attributes": {
+						"POSITION": 9,
+						"NORMAL": 10,
+						"TEXCOORD_0": 11,
+						"TANGENT": 12
+					},
+					"indices": 13,
+					"material": 1,
+					"mode": 4
+				}
+			]
+		},
+		{
+			"name": "mesh_Hexafon_23354Hexafon",
+			"primitives": [
+				{
+					"attributes": {
+						"POSITION": 14,
+						"NORMAL": 15,
+						"TEXCOORD_0": 16,
+						"TANGENT": 17
+					},
+					"indices": 18,
+					"material": 2,
+					"mode": 4
+				}
+			]
+		},
+		{
+			"name": "mesh_TeleporterVIP_Button_23324TeleporterVIP_Button",
+			"primitives": [
+				{
+					"attributes": {
+						"POSITION": 19,
+						"NORMAL": 20,
+						"TEXCOORD_0": 21,
+						"TANGENT": 22
+					},
+					"indices": 23,
+					"material": 0,
+					"mode": 4
+				}
+			]
+		}
+	],
+	"nodes": [
+		{
+			"name": "UnityGlTF_root",
+			"children": [
+				1
+			]
+		},
+		{
+			"name": "node_Teleporter_VIP_Art",
+			"mesh": 0,
+			"children": [
+				2,
+				3,
+				4
+			],
+			"matrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
+		},
+		{
+			"name": "node_Flower_Anim",
+			"mesh": 1,
+			"translation": [ 3.814697E-08, 2.355755, -0.1134413]
+		},
+		{
+			"name": "node_Hexafon",
+			"mesh": 2,
+			"translation": [ 3.814697E-08, 2.355755, -0.1341066]
+		},
+		{
+			"name": "node_TeleporterVIP_Button",
+			"mesh": 3
+		}
+	],
+	"samplers": [
+		{
+			"magFilter": 9729,
+			"minFilter": 9985,
+			"wrapS": 10497,
+			"wrapT": 10497
+		}
+	],
+	"scenes": [
+		{
+			"name":"defaultScene",
+			"nodes": [
+				0
+			]
+		}
+	],
+	"scene": 0,
+	"textures": [
+		{
+			"sampler": 0,
+			"source": 0
+		},
+		{
+			"sampler": 0,
+			"source": 1
+		},
+		{
+			"sampler": 0,
+			"source": 2
+		}
+	]
+}
