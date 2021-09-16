@@ -3,11 +3,12 @@ import { getUserData, UserData } from '@decentraland/Identity'
 //import * as EthereumController from '@decentraland/EthereumController'
 import * as ui from '@dcl/ui-scene-utils'
 import { clearDelay, delay } from '../delay'
+import { UserService } from '../services/userService'
 //import { PlayCloseSound, PlayCoinSound, PlayOpenSound } from './sounds'
 
 
 //export let ethController = EthereumController
-const POAP_SERVER = "https://lowpolyhub.com/api/poap/"
+const POAP_SERVER = "https://v2.lowpolyhub.com:3000/poaps/"
 
 export let userData: UserData
 ///export let playerRealm: Realm
@@ -49,7 +50,7 @@ export async function handlePoap(eventName: string) {
 
   if (userData.hasConnectedWeb3) {
     let poap = await sendpoap(eventName)
-    if (poap && poap.status == "success") {
+    if (poap && poap.status == 200) {
       //PlayCoinSound()
       let p = new ui.OkPrompt(
         "A POAP token for today's event will arrive to your account very soon!",
@@ -63,8 +64,8 @@ export async function handlePoap(eventName: string) {
     } else {
       //PlayOpenSound()
       let text = 'Something is wrong with the server, please try again later.'
-      if (poap && poap.error) {
-        text = poap.error
+      if (poap && poap.msg) {
+        text = poap.msg
       }
       let p = new ui.OkPrompt(
         text,
@@ -102,7 +103,10 @@ export async function sendpoap(eventName: string) {
     await setRealm()
   }*/
 
-  const url = POAP_SERVER + eventName + "?address=" + userData.userId
+  await UserService.instance().signAndLogin()
+  const loginToken = UserService.instance().getAccessToken()      
+
+  const url = POAP_SERVER + eventName + "/" + userData.userId
 
   /*let body = JSON.stringify({
     address: userData.userId,
@@ -113,8 +117,11 @@ export async function sendpoap(eventName: string) {
   log('sending req to: ', url)
   try {
     let response = await fetch(url, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      method: 'GET',
+      headers: { 
+        'Authorization': "Bearer "+loginToken,
+        'Content-Type': 'application/json' 
+      },
       //body: body,
     })
     let data = await response.json()
@@ -198,14 +205,25 @@ export async function hasPoap(eventId: number) {
 @Component("Poap")
 export class Poap {
   entity: Entity
+  inCooldown: boolean = false 
   constructor(entity: Entity, eventName: string, bSpawnDefaultModel: boolean = true, bannerEntity: Entity = null) {
     this.entity = entity
     if (!bSpawnDefaultModel && (entity.hasComponent(GLTFShape) || entity.hasComponent(BoxShape) || entity.hasComponent(SphereShape))) {
       entity.addComponent(new OnPointerDown(
         (e) => {
-          handlePoap(eventName)
+          if (!this.inCooldown) {
+            this.inCooldown = true
+            delay(() => {
+              this.inCooldown = false
+            }, 4000);
+            handlePoap(eventName)
+          }
+          
         },
-        { hoverText: 'Get Attendance Token' }
+        { 
+          hoverText: 'Get Attendance Token',
+          button: ActionButton.POINTER
+        }
       ))
     }
     else{
@@ -250,6 +268,7 @@ export class Dispenser extends Entity {
   buttonAnim = new AnimationState('Button_Action', { looping: false })
   eventName: string
   timeout: any
+  inCooldown: boolean = false
   constructor(transform: TransformConstructorArgs, eventName: string) {
     super()
     //engine.addEntity(this)
@@ -274,9 +293,18 @@ export class Dispenser extends Entity {
         button.getComponent(Animator).getClip('Action').stop()
         button.getComponent(Animator).getClip('Action').play()
         //sceneMessageBus.emit('activatePoap', {})
-        handlePoap(eventName)
+        if (!this.inCooldown) {
+          this.inCooldown = true
+          delay(() => {
+            this.inCooldown = false
+          }, 4000);
+          handlePoap(eventName)
+        }
       },
-      { hoverText: 'Get Attendance Token' }
+      { 
+        hoverText: 'Get Attendance Token',
+        button: ActionButton.POINTER
+      }
     ))
   }
 

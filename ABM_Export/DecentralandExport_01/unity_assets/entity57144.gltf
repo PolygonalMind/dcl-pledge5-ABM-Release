@@ -1,0 +1,170 @@
+{
+	"asset": {
+		"generator": "Unity 2020.3.11f1",
+		"extras": {
+			"exporterVersion" : "2.2.1"
+		},
+		"version": "2.0"
+	},
+	"accessors": [
+		{
+			"bufferView": 2,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 128,
+			"max": [ 1, 2.002378, 0.1600001 ],
+			"min": [ -1, 0.002377748, -0.1600001 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 2,
+			"byteOffset": 1536,
+			"componentType": 5126,
+			"count": 128,
+			"max": [ 1, 1, 1 ],
+			"min": [ -1, -1, -1 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 1,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 128,
+			"max": [ 0.9901569, 0.9898124 ],
+			"min": [ 0.007986724, 0.007642239 ],
+			"type": "VEC2"
+		},
+		{
+			"bufferView": 3,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 128,
+			"max": [ 1, 0, 0, 1 ],
+			"min": [ -1, 0, 0, -1 ],
+			"type": "VEC4"
+		},
+		{
+			"bufferView": 0,
+			"byteOffset": 0,
+			"componentType": 5123,
+			"count": 372,
+			"max": [ 127 ],
+			"min": [ 0 ],
+			"type": "SCALAR"
+		}
+	],
+	"buffers": [
+		{
+			"byteLength": 6888,
+			"uri": "entity57144.bin"
+		}
+	],
+	"bufferViews": [
+		{
+			"buffer": 0,
+			"byteLength": 744,
+			"target": 34963,
+			"byteOffset": 6144
+		},
+		{
+			"buffer": 0,
+			"byteLength": 1024,
+			"target": 34962,
+			"byteStride": 8,
+			"byteOffset": 0
+		},
+		{
+			"buffer": 0,
+			"byteLength": 3072,
+			"target": 34962,
+			"byteStride": 12,
+			"byteOffset": 1024
+		},
+		{
+			"buffer": 0,
+			"byteLength": 2048,
+			"target": 34962,
+			"byteStride": 16,
+			"byteOffset": 4096
+		}
+	],
+	"images": [
+		{
+			"uri": "Assets/Visuals/Materials/Textures/opensea.png"
+		}
+	],
+	"materials": [
+		{
+			"pbrMetallicRoughness": {
+				"baseColorTexture" : {
+					"index" : 0,
+					"texCoord" : 0
+				},
+				"baseColorFactor": [1, 1, 1, 1],
+				"metallicFactor": 0,
+				"roughnessFactor": 1
+			},
+			"emissiveTexture" : {
+				"index" : 0,
+				"texCoord" : 0
+			},
+			"emissiveFactor": [0.2051996, 0.2051996, 0.2051996],
+			"doubleSided": false,
+			"name": "OS_Logo_Mat"
+		}
+	],
+	"meshes": [
+		{
+			"name": "mesh_OS_Logo_33480OS_Logo_Art",
+			"primitives": [
+				{
+					"attributes": {
+						"POSITION": 0,
+						"NORMAL": 1,
+						"TEXCOORD_0": 2,
+						"TANGENT": 3
+					},
+					"indices": 4,
+					"material": 0,
+					"mode": 4
+				}
+			]
+		}
+	],
+	"nodes": [
+		{
+			"name": "UnityGlTF_root",
+			"children": [
+				1
+			]
+		},
+		{
+			"name": "node_OS_Logo_Art",
+			"mesh": 0,
+			"matrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
+		}
+	],
+	"samplers": [
+		{
+			"magFilter": 9729,
+			"minFilter": 9985,
+			"wrapS": 10497,
+			"wrapT": 10497
+		}
+	],
+	"scenes": [
+		{
+			"name":"defaultScene",
+			"nodes": [
+				0
+			]
+		}
+	],
+	"scene": 0,
+	"textures": [
+		{
+			"sampler": 0,
+			"source": 0
+		}
+	]
+}

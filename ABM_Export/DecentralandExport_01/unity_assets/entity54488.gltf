@@ -1,0 +1,172 @@
+{
+	"asset": {
+		"generator": "Unity 2020.3.11f1",
+		"extras": {
+			"exporterVersion" : "2.2.1"
+		},
+		"version": "2.0"
+	},
+	"accessors": [
+		{
+			"bufferView": 2,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 551,
+			"max": [ 3.703594, 2.843475, 3.731822 ],
+			"min": [ -3.63857, -0.1167351, -2.414643 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 2,
+			"byteOffset": 6612,
+			"componentType": 5126,
+			"count": 551,
+			"max": [ 0.9182909, 0.9997978, 0.8642038 ],
+			"min": [ -0.9678994, 0.1907715, -0.9815685 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 1,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 551,
+			"max": [ 0.7978719, 1 ],
+			"min": [ 0.2027652, 0 ],
+			"type": "VEC2"
+		},
+		{
+			"bufferView": 3,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 551,
+			"max": [ 1, 0.6226673, 0.9989221, 1 ],
+			"min": [ -1, -0.5317253, -0.9992492, -1 ],
+			"type": "VEC4"
+		},
+		{
+			"bufferView": 0,
+			"byteOffset": 0,
+			"componentType": 5123,
+			"count": 1824,
+			"max": [ 550 ],
+			"min": [ 0 ],
+			"type": "SCALAR"
+		}
+	],
+	"buffers": [
+		{
+			"byteLength": 30096,
+			"uri": "entity54488.bin"
+		}
+	],
+	"bufferViews": [
+		{
+			"buffer": 0,
+			"byteLength": 3648,
+			"target": 34963,
+			"byteOffset": 26448
+		},
+		{
+			"buffer": 0,
+			"byteLength": 4408,
+			"target": 34962,
+			"byteStride": 8,
+			"byteOffset": 0
+		},
+		{
+			"buffer": 0,
+			"byteLength": 13224,
+			"target": 34962,
+			"byteStride": 12,
+			"byteOffset": 4408
+		},
+		{
+			"buffer": 0,
+			"byteLength": 8816,
+			"target": 34962,
+			"byteStride": 16,
+			"byteOffset": 17632
+		}
+	],
+	"images": [
+		{
+			"uri": "Assets/Visuals/Materials/Textures/Altar_Albedo.png"
+		}
+	],
+	"materials": [
+		{
+			"pbrMetallicRoughness": {
+				"baseColorTexture" : {
+					"index" : 0,
+					"texCoord" : 0
+				},
+				"baseColorFactor": [1, 1, 1, 1],
+				"metallicFactor": 0,
+				"roughnessFactor": 0.5
+			},
+			"alphaMode": "BLEND",
+			"alphaCutoff": 0.5,
+			"emissiveTexture" : {
+				"index" : 0,
+				"texCoord" : 0
+			},
+			"emissiveFactor": [1, 1, 1],
+			"doubleSided": true,
+			"name": "Altar_Mat"
+		}
+	],
+	"meshes": [
+		{
+			"name": "mesh_AltarPetals_33304AltarPetals",
+			"primitives": [
+				{
+					"attributes": {
+						"POSITION": 0,
+						"NORMAL": 1,
+						"TEXCOORD_0": 2,
+						"TANGENT": 3
+					},
+					"indices": 4,
+					"material": 0,
+					"mode": 4
+				}
+			]
+		}
+	],
+	"nodes": [
+		{
+			"name": "UnityGlTF_root",
+			"children": [
+				1
+			]
+		},
+		{
+			"name": "node_AltarPetals",
+			"mesh": 0,
+			"matrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
+		}
+	],
+	"samplers": [
+		{
+			"magFilter": 9729,
+			"minFilter": 9985,
+			"wrapS": 10497,
+			"wrapT": 10497
+		}
+	],
+	"scenes": [
+		{
+			"name":"defaultScene",
+			"nodes": [
+				0
+			]
+		}
+	],
+	"scene": 0,
+	"textures": [
+		{
+			"sampler": 0,
+			"source": 0
+		}
+	]
+}

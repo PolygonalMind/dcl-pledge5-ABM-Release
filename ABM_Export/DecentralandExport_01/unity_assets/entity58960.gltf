@@ -1,0 +1,172 @@
+{
+	"asset": {
+		"generator": "Unity 2020.3.11f1",
+		"extras": {
+			"exporterVersion" : "2.2.1"
+		},
+		"version": "2.0"
+	},
+	"accessors": [
+		{
+			"bufferView": 2,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 1290,
+			"max": [ 24.12549, 51.14787, 47.92929 ],
+			"min": [ -17.25695, 16.54291, 13.72756 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 2,
+			"byteOffset": 15480,
+			"componentType": 5126,
+			"count": 1290,
+			"max": [ 0.9997117, 0.1776806, 0.9995629 ],
+			"min": [ -0.9990602, -1, -0.9995306 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 1,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 1290,
+			"max": [ 3.337432, 2.223402 ],
+			"min": [ -1.234971, 0.1432344 ],
+			"type": "VEC2"
+		},
+		{
+			"bufferView": 3,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 1290,
+			"max": [ 0.8756225, 0.9619124, 1, 1 ],
+			"min": [ -1, -0.8572499, -0.8567323, -1 ],
+			"type": "VEC4"
+		},
+		{
+			"bufferView": 0,
+			"byteOffset": 0,
+			"componentType": 5123,
+			"count": 4635,
+			"max": [ 1289 ],
+			"min": [ 0 ],
+			"type": "SCALAR"
+		}
+	],
+	"buffers": [
+		{
+			"byteLength": 71190,
+			"uri": "entity58960.bin"
+		}
+	],
+	"bufferViews": [
+		{
+			"buffer": 0,
+			"byteLength": 9270,
+			"target": 34963,
+			"byteOffset": 61920
+		},
+		{
+			"buffer": 0,
+			"byteLength": 10320,
+			"target": 34962,
+			"byteStride": 8,
+			"byteOffset": 0
+		},
+		{
+			"buffer": 0,
+			"byteLength": 30960,
+			"target": 34962,
+			"byteStride": 12,
+			"byteOffset": 10320
+		},
+		{
+			"buffer": 0,
+			"byteLength": 20640,
+			"target": 34962,
+			"byteStride": 16,
+			"byteOffset": 41280
+		}
+	],
+	"images": [
+		{
+			"uri": "Assets/Visuals/Materials/Textures/ChipLines.png"
+		}
+	],
+	"materials": [
+		{
+			"pbrMetallicRoughness": {
+				"baseColorTexture" : {
+					"index" : 0,
+					"texCoord" : 0
+				},
+				"baseColorFactor": [1, 0.01415092, 0.9208877, 1],
+				"metallicFactor": 0,
+				"roughnessFactor": 0.5
+			},
+			"alphaMode": "BLEND",
+			"alphaCutoff": 0.5,
+			"emissiveTexture" : {
+				"index" : 0,
+				"texCoord" : 0
+			},
+			"emissiveFactor": [1, 0.6839622, 0.9543501],
+			"doubleSided": false,
+			"name": "DomeChips_Mat"
+		}
+	],
+	"meshes": [
+		{
+			"name": "mesh_Dome02_Outline_33792Dome02_Outline",
+			"primitives": [
+				{
+					"attributes": {
+						"POSITION": 0,
+						"NORMAL": 1,
+						"TEXCOORD_0": 2,
+						"TANGENT": 3
+					},
+					"indices": 4,
+					"material": 0,
+					"mode": 4
+				}
+			]
+		}
+	],
+	"nodes": [
+		{
+			"name": "UnityGlTF_root",
+			"children": [
+				1
+			]
+		},
+		{
+			"name": "node_Dome02_Outline",
+			"mesh": 0,
+			"matrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
+		}
+	],
+	"samplers": [
+		{
+			"magFilter": 9729,
+			"minFilter": 9985,
+			"wrapS": 10497,
+			"wrapT": 10497
+		}
+	],
+	"scenes": [
+		{
+			"name":"defaultScene",
+			"nodes": [
+				0
+			]
+		}
+	],
+	"scene": 0,
+	"textures": [
+		{
+			"sampler": 0,
+			"source": 0
+		}
+	]
+}

@@ -1,0 +1,172 @@
+{
+	"asset": {
+		"generator": "Unity 2020.3.11f1",
+		"extras": {
+			"exporterVersion" : "2.2.1"
+		},
+		"version": "2.0"
+	},
+	"accessors": [
+		{
+			"bufferView": 2,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 47,
+			"max": [ 2.678445, 2.591655, 2.75482 ],
+			"min": [ -2.665649, 0.8162321, -2.783421 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 2,
+			"byteOffset": 564,
+			"componentType": 5126,
+			"count": 47,
+			"max": [ 0.8730261, 0.479004, 0.8778175 ],
+			"min": [ -0.8730261, 0.4711522, -0.8778175 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 1,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 47,
+			"max": [ 0.983327, 0.9577098 ],
+			"min": [ 0.7123749, 0.7438257 ],
+			"type": "VEC2"
+		},
+		{
+			"bufferView": 3,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 47,
+			"max": [ 1, 0.8777515, 0.9920484, 1 ],
+			"min": [ -1, -0.09989798, -0.9827208, -1 ],
+			"type": "VEC4"
+		},
+		{
+			"bufferView": 0,
+			"byteOffset": 0,
+			"componentType": 5123,
+			"count": 108,
+			"max": [ 46 ],
+			"min": [ 0 ],
+			"type": "SCALAR"
+		}
+	],
+	"buffers": [
+		{
+			"byteLength": 2472,
+			"uri": "entity67984.bin"
+		}
+	],
+	"bufferViews": [
+		{
+			"buffer": 0,
+			"byteLength": 216,
+			"target": 34963,
+			"byteOffset": 2256
+		},
+		{
+			"buffer": 0,
+			"byteLength": 376,
+			"target": 34962,
+			"byteStride": 8,
+			"byteOffset": 0
+		},
+		{
+			"buffer": 0,
+			"byteLength": 1128,
+			"target": 34962,
+			"byteStride": 12,
+			"byteOffset": 376
+		},
+		{
+			"buffer": 0,
+			"byteLength": 752,
+			"target": 34962,
+			"byteStride": 16,
+			"byteOffset": 1504
+		}
+	],
+	"images": [
+		{
+			"uri": "Assets/Visuals/Materials/Textures/HoloPot_Albedo.png"
+		}
+	],
+	"materials": [
+		{
+			"pbrMetallicRoughness": {
+				"baseColorTexture" : {
+					"index" : 0,
+					"texCoord" : 0
+				},
+				"baseColorFactor": [1, 1, 1, 1],
+				"metallicFactor": 0,
+				"roughnessFactor": 0.5
+			},
+			"alphaMode": "BLEND",
+			"alphaCutoff": 0.182,
+			"emissiveTexture" : {
+				"index" : 0,
+				"texCoord" : 0
+			},
+			"emissiveFactor": [0.7071067, 0.7071067, 0.7071067],
+			"doubleSided": true,
+			"name": "HoloPot02_Mat"
+		}
+	],
+	"meshes": [
+		{
+			"name": "mesh_ParticlesEmitter_32946ParticleEmitter_Art (5)",
+			"primitives": [
+				{
+					"attributes": {
+						"POSITION": 0,
+						"NORMAL": 1,
+						"TEXCOORD_0": 2,
+						"TANGENT": 3
+					},
+					"indices": 4,
+					"material": 0,
+					"mode": 4
+				}
+			]
+		}
+	],
+	"nodes": [
+		{
+			"name": "UnityGlTF_root",
+			"children": [
+				1
+			]
+		},
+		{
+			"name": "node_ParticleEmitter_Art (5)",
+			"mesh": 0,
+			"matrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
+		}
+	],
+	"samplers": [
+		{
+			"magFilter": 9729,
+			"minFilter": 9985,
+			"wrapS": 10497,
+			"wrapT": 10497
+		}
+	],
+	"scenes": [
+		{
+			"name":"defaultScene",
+			"nodes": [
+				0
+			]
+		}
+	],
+	"scene": 0,
+	"textures": [
+		{
+			"sampler": 0,
+			"source": 0
+		}
+	]
+}

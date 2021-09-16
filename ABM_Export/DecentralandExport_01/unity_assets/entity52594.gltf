@@ -1,0 +1,166 @@
+{
+	"asset": {
+		"generator": "Unity 2020.3.11f1",
+		"extras": {
+			"exporterVersion" : "2.2.1"
+		},
+		"version": "2.0"
+	},
+	"accessors": [
+		{
+			"bufferView": 2,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 102,
+			"max": [ 0.2001965, 2.231801, 0.07735786 ],
+			"min": [ -0.1905071, 0.9499502, -0.01113454 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 2,
+			"byteOffset": 1224,
+			"componentType": 5126,
+			"count": 102,
+			"max": [ 0.9980889, 0.923888, 0.9999998 ],
+			"min": [ -0.9520069, -0.9910602, -0.9895009 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 1,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 102,
+			"max": [ 0.1385168, 0.9730899 ],
+			"min": [ 0.01971848, 0.5833274 ],
+			"type": "VEC2"
+		},
+		{
+			"bufferView": 3,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 102,
+			"max": [ 0.6199154, 0.7659962, 0.9989355, 1 ],
+			"min": [ -1, -0.8758952, -0.9983163, -1 ],
+			"type": "VEC4"
+		},
+		{
+			"bufferView": 0,
+			"byteOffset": 0,
+			"componentType": 5123,
+			"count": 345,
+			"max": [ 101 ],
+			"min": [ 0 ],
+			"type": "SCALAR"
+		}
+	],
+	"buffers": [
+		{
+			"byteLength": 5586,
+			"uri": "entity52594.bin"
+		}
+	],
+	"bufferViews": [
+		{
+			"buffer": 0,
+			"byteLength": 690,
+			"target": 34963,
+			"byteOffset": 4896
+		},
+		{
+			"buffer": 0,
+			"byteLength": 816,
+			"target": 34962,
+			"byteStride": 8,
+			"byteOffset": 0
+		},
+		{
+			"buffer": 0,
+			"byteLength": 2448,
+			"target": 34962,
+			"byteStride": 12,
+			"byteOffset": 816
+		},
+		{
+			"buffer": 0,
+			"byteLength": 1632,
+			"target": 34962,
+			"byteStride": 16,
+			"byteOffset": 3264
+		}
+	],
+	"images": [
+		{
+			"uri": "Assets/Visuals/Materials/Textures/Gong_Albedo.png"
+		}
+	],
+	"materials": [
+		{
+			"pbrMetallicRoughness": {
+				"baseColorTexture" : {
+					"index" : 0,
+					"texCoord" : 0
+				},
+				"baseColorFactor": [1, 1, 1, 1],
+				"metallicFactor": 0,
+				"roughnessFactor": 0.792
+			},
+			"emissiveFactor": [0, 0, 0],
+			"doubleSided": false,
+			"name": "Gong_Mat"
+		}
+	],
+	"meshes": [
+		{
+			"name": "mesh_Rope_32834Rope",
+			"primitives": [
+				{
+					"attributes": {
+						"POSITION": 0,
+						"NORMAL": 1,
+						"TEXCOORD_0": 2,
+						"TANGENT": 3
+					},
+					"indices": 4,
+					"material": 0,
+					"mode": 4
+				}
+			]
+		}
+	],
+	"nodes": [
+		{
+			"name": "UnityGlTF_root",
+			"children": [
+				1
+			]
+		},
+		{
+			"name": "node_Rope",
+			"mesh": 0,
+			"matrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
+		}
+	],
+	"samplers": [
+		{
+			"magFilter": 9729,
+			"minFilter": 9985,
+			"wrapS": 10497,
+			"wrapT": 10497
+		}
+	],
+	"scenes": [
+		{
+			"name":"defaultScene",
+			"nodes": [
+				0
+			]
+		}
+	],
+	"scene": 0,
+	"textures": [
+		{
+			"sampler": 0,
+			"source": 0
+		}
+	]
+}

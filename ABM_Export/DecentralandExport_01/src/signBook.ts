@@ -1,4 +1,5 @@
-import { getEntityWorldPosition } from "node_modules/decentraland-ecs-utils/helpers/helperfunctions"
+import { UserService } from "./imports/services/userService"
+
 
 const LIMIT = 33
 
@@ -6,6 +7,7 @@ type signInfo = {
   nSigns: number,
   page: number,
   nPages: number,
+  nextPage: boolean,
   signs: any[],
   bPendingRequest: boolean,
   bAlreadySigned: boolean
@@ -16,22 +18,50 @@ var requestInfo: signInfo = {
   bAlreadySigned: false,
   nSigns: 0,
   page: 0,
-  nPages: 1,
+  nextPage: false,
+  nPages: 0,
+
   signs: [],
 }
 
+
 function signatureListRequest(newpage: number, callback = function(){}){
-  if (newpage<requestInfo.nPages && requestInfo.bPendingRequest==false) {
+  if (requestInfo.bPendingRequest==false) {
     requestInfo.bPendingRequest = true
     requestInfo.page = newpage
     executeTask(async () => {
       try {
-        let response = await fetch("https://lowpolyhub.com:3000/api/signatures/abm/2?skip="+requestInfo.page*LIMIT+"&limit="+LIMIT, {
+        
+        let response = await fetch("https://v2.lowpolyhub.com:3000/signatures?signbook=abm&skip="+requestInfo.page*LIMIT+"&limit="+LIMIT, {
           headers: { "Content-Type": "application/json" },
           method: "GET"
         })
+
+        /*let response = await fetch("https://lowpolyhub.com:3000/api/signatures/abm/1?skip="+requestInfo.page*LIMIT+"&limit="+LIMIT, {
+          headers: { "Content-Type": "application/json" },
+          method: "GET"
+        })*/
         let json = await response.json()
-        if (json.status && json.status=="success") {
+        if (response.status && response.status==200) {
+          requestInfo.signs = json
+          //requestInfo.nSigns = json.result.totalSigns
+          //requestInfo.nPages = Math.ceil(requestInfo.nSigns/LIMIT)
+          if (requestInfo.signs.length==LIMIT) {
+            requestInfo.nextPage = true
+          }
+          else{
+            requestInfo.nPages = requestInfo.page+1
+            requestInfo.nextPage = false
+          }
+   
+          requestInfo.bPendingRequest = false
+          callback()
+          console_log(requestInfo);
+        }
+        else{
+          throw new Error(json)
+        }
+        /*if (json.status && json.status=="success") {
           requestInfo.signs = json.result.signs
           requestInfo.nSigns = json.result.totalSigns
           requestInfo.nPages = Math.ceil(requestInfo.nSigns/LIMIT)
@@ -41,7 +71,7 @@ function signatureListRequest(newpage: number, callback = function(){}){
         }
         else{
           throw new Error(json.error)
-        }
+        }*/
 
       } catch (e){
         requestInfo.bPendingRequest = false
@@ -57,7 +87,29 @@ function signBookRequest(address:string, name:string, callback = function(){}){
     requestInfo.bAlreadySigned = true
     executeTask(async () => {
       try {
-        let response = await fetch("https://lowpolyhub.com:3000/api/signatures/abm/2?address="+address+"&name="+name, {
+        await UserService.instance().signAndLogin()
+        const loginToken = UserService.instance().getAccessToken()      
+        const body = {
+          signbook: "abm",
+          wallet: address,
+          username: name
+        }
+        let response = await fetch("https://v2.lowpolyhub.com:3000/signatures", {
+          headers: { 
+            "Authorization": "Bearer "+loginToken,
+            "Content-Type": "application/json" 
+          },
+          body: JSON.stringify(body),
+          method: "POST"
+        })
+        let json = await response.json()
+        if (response.status && response.status==200) {
+          callback()
+        }
+        else{
+          throw new Error(json.message)
+        }
+        /*let response = await fetch("https://lowpolyhub.com:3000/api/signatures/abm/1?address="+address+"&name="+name, {
           headers: { "Content-Type": "application/json" },
           method: "POST"
         })
@@ -68,7 +120,7 @@ function signBookRequest(address:string, name:string, callback = function(){}){
         }
         else{
           throw new Error(json.error)
-        }
+        }*/
 
       } catch (e){
         requestInfo.bAlreadySigned = false
@@ -93,15 +145,21 @@ export class SignPanel {
 
     const tra = entity.getComponent(Transform)
     this.panelEntity = new Entity()
-    this.panelEntity.addComponent(new Transform({position: getEntityWorldPosition(panelEntity), rotation: tra.rotation.clone()}))
-    engine.addEntity(this.panelEntity)
+    this.panelEntity.addComponent(new Transform({
+      //position: getEntityWorldPosition(panelEntity), rotation: tra.rotation.clone()
+    }))
+    //engine.addEntity(this.panelEntity)
+    this.panelEntity.setParent(panelEntity)
 
     this.previousButton = backButton
     this.nextButton = nextButton
 
     this.pagesEntity = new Entity()
-    this.pagesEntity.addComponent(new Transform({position: getEntityWorldPosition(pagesEntity), rotation: tra.rotation.clone()}))
-    engine.addEntity(this.pagesEntity)
+    this.pagesEntity.addComponent(new Transform({
+      //position: getEntityWorldPosition(pagesEntity), rotation: tra.rotation.clone()
+    }))
+    //engine.addEntity(this.pagesEntity)
+    this.pagesEntity.setParent(pagesEntity)
 
     var self = this
     this.nextButton.addComponent(new OnPointerDown(
@@ -127,12 +185,12 @@ export class SignPanel {
     this.pagesTextShape = new TextShape()
     this.pagesTextShape.fontSize = 3
     this.pagesTextShape.color = Color3.Black()
-    this.pagesTextShape.value = (requestInfo.page+1)+" / "+requestInfo.nPages
+    this.pagesTextShape.value = (requestInfo.page+1)+" / -"
     this.pagesEntity.addComponent(this.pagesTextShape)
     this.pagesEntity.getComponent(Transform).rotate(Vector3.Up(), 90)
-    this.pagesEntity.getComponent(Transform).translate((new Vector3(-0.05,0,-0.05)))
+    this.pagesEntity.getComponent(Transform).translate((new Vector3(-0.05,0,0)))
 
-    this.panelEntity.getComponent(Transform).translate((new Vector3(-0.05,1.1,-0.05)))
+    this.panelEntity.getComponent(Transform).translate((new Vector3(-0.05,1,0)))
     this.panelEntity.getComponent(Transform).rotate(Vector3.Up(), 90)
 
     const rows = new Entity()
@@ -187,11 +245,18 @@ export class SignPanel {
     self.updateSignPanel()
   }
   nextPage(){
-    if (!requestInfo.bPendingRequest && requestInfo.page+1<requestInfo.nPages) {
+    if (!requestInfo.bPendingRequest && requestInfo.nextPage) {
       var self = this
       self.setLoadingPanel()
       signatureListRequest(requestInfo.page+1, function() {self.updateSignPanel()})
-      this.pagesTextShape.value = (requestInfo.page+1)+"/"+requestInfo.nPages
+
+      if (requestInfo.nPages) {
+        this.pagesTextShape.value = (requestInfo.page+1)+"/ "+requestInfo.nPages
+      }
+      else{
+        this.pagesTextShape.value = (requestInfo.page+1)+"/ -"
+      }
+      
     }
   }
   previousPage(){
@@ -199,7 +264,12 @@ export class SignPanel {
       var self = this
       self.setLoadingPanel()
       signatureListRequest(requestInfo.page-1, function() {self.updateSignPanel()})
-      this.pagesTextShape.value = (requestInfo.page+1)+"/"+requestInfo.nPages
+      if (requestInfo.nPages) {
+        this.pagesTextShape.value = (requestInfo.page+1)+"/ "+requestInfo.nPages
+      }
+      else{
+        this.pagesTextShape.value = (requestInfo.page+1)+"/ -"
+      }
     }
   }
   setLoadingPanel(){
@@ -208,19 +278,24 @@ export class SignPanel {
     this.panelTextShape2.value = "Loading ....."
   }
   updateSignPanel(){
-    this.pagesTextShape.value = (requestInfo.page+1)+"/"+requestInfo.nPages
+    if (requestInfo.nPages) {
+      this.pagesTextShape.value = (requestInfo.page+1)+"/ "+requestInfo.nPages
+    }
+    else{
+      this.pagesTextShape.value = (requestInfo.page+1)+"/ -"
+    }
     this.panelTextShape1.value = ""
     this.panelTextShape2.value = ""
     this.panelTextShape3.value = ""
     for (let i = 0; i < requestInfo.signs.length; i++) {
       if ((i+1)%3==1) {
-        this.panelTextShape1.value += requestInfo.signs[i].name+"\n"
+        this.panelTextShape1.value += requestInfo.signs[i].username+"\n"
       }
       else if((i+1)%3==2){
-        this.panelTextShape2.value += requestInfo.signs[i].name+"\n"
+        this.panelTextShape2.value += requestInfo.signs[i].username+"\n"
       }
       else if((i+1)%3==0){
-        this.panelTextShape3.value += requestInfo.signs[i].name+"\n"
+        this.panelTextShape3.value += requestInfo.signs[i].username+"\n"
       }
     }
 

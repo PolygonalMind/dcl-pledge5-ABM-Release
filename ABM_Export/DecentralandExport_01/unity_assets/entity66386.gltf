@@ -1,0 +1,168 @@
+{
+	"asset": {
+		"generator": "Unity 2020.3.11f1",
+		"extras": {
+			"exporterVersion" : "2.2.1"
+		},
+		"version": "2.0"
+	},
+	"accessors": [
+		{
+			"bufferView": 2,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 2988,
+			"max": [ 2.679967, 6.242548, 2.948274 ],
+			"min": [ -3.212755, 1.222402, -2.912439 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 2,
+			"byteOffset": 35856,
+			"componentType": 5126,
+			"count": 2988,
+			"max": [ 0.5909401, 0.9999106, 0.7250948 ],
+			"min": [ -0.6996069, 0.5697465, -0.7000182 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 1,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 2988,
+			"max": [ 0.969521, 0.9850534 ],
+			"min": [ 0.6766225, 0.3582104 ],
+			"type": "VEC2"
+		},
+		{
+			"bufferView": 3,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 2988,
+			"max": [ 0.7471796, 0.6149192, 0.6289771, 1 ],
+			"min": [ -0.9999706, -0.739506, -0.9998661, 1 ],
+			"type": "VEC4"
+		},
+		{
+			"bufferView": 0,
+			"byteOffset": 0,
+			"componentType": 5123,
+			"count": 4482,
+			"max": [ 2987 ],
+			"min": [ 0 ],
+			"type": "SCALAR"
+		}
+	],
+	"buffers": [
+		{
+			"byteLength": 152388,
+			"uri": "entity66386.bin"
+		}
+	],
+	"bufferViews": [
+		{
+			"buffer": 0,
+			"byteLength": 8964,
+			"target": 34963,
+			"byteOffset": 143424
+		},
+		{
+			"buffer": 0,
+			"byteLength": 23904,
+			"target": 34962,
+			"byteStride": 8,
+			"byteOffset": 0
+		},
+		{
+			"buffer": 0,
+			"byteLength": 71712,
+			"target": 34962,
+			"byteStride": 12,
+			"byteOffset": 23904
+		},
+		{
+			"buffer": 0,
+			"byteLength": 47808,
+			"target": 34962,
+			"byteStride": 16,
+			"byteOffset": 95616
+		}
+	],
+	"images": [
+		{
+			"uri": "Assets/Visuals/Materials/Textures/SakuraFlower_Albedo.png"
+		}
+	],
+	"materials": [
+		{
+			"pbrMetallicRoughness": {
+				"baseColorTexture" : {
+					"index" : 0,
+					"texCoord" : 0
+				},
+				"baseColorFactor": [1, 1, 1, 1],
+				"metallicFactor": 0,
+				"roughnessFactor": 1
+			},
+			"alphaMode": "MASK",
+			"alphaCutoff": 0.5,
+			"emissiveFactor": [0, 0, 0],
+			"doubleSided": false,
+			"name": "Flowers_Mat"
+		}
+	],
+	"meshes": [
+		{
+			"name": "mesh_Flowers_33002Flowers",
+			"primitives": [
+				{
+					"attributes": {
+						"POSITION": 0,
+						"NORMAL": 1,
+						"TEXCOORD_0": 2,
+						"TANGENT": 3
+					},
+					"indices": 4,
+					"material": 0,
+					"mode": 4
+				}
+			]
+		}
+	],
+	"nodes": [
+		{
+			"name": "UnityGlTF_root",
+			"children": [
+				1
+			]
+		},
+		{
+			"name": "node_Flowers",
+			"mesh": 0,
+			"matrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
+		}
+	],
+	"samplers": [
+		{
+			"magFilter": 9729,
+			"minFilter": 9985,
+			"wrapS": 10497,
+			"wrapT": 10497
+		}
+	],
+	"scenes": [
+		{
+			"name":"defaultScene",
+			"nodes": [
+				0
+			]
+		}
+	],
+	"scene": 0,
+	"textures": [
+		{
+			"sampler": 0,
+			"source": 0
+		}
+	]
+}

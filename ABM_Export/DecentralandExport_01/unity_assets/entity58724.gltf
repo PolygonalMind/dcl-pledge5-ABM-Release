@@ -1,0 +1,177 @@
+{
+	"asset": {
+		"generator": "Unity 2020.3.11f1",
+		"extras": {
+			"exporterVersion" : "2.2.1"
+		},
+		"version": "2.0"
+	},
+	"accessors": [
+		{
+			"bufferView": 2,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 2840,
+			"max": [ 17.9598, 33.63196, 41.3574 ],
+			"min": [ -6.02054, 29.5363, 19.13204 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 2,
+			"byteOffset": 34080,
+			"componentType": 5126,
+			"count": 2840,
+			"max": [ 0.9999992, 1, 0.9999992 ],
+			"min": [ -0.9999992, -1, -0.9999992 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 1,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 2840,
+			"max": [ 0.9818673, 0.9739197 ],
+			"min": [ 0.02702541, 0.02657348 ],
+			"type": "VEC2"
+		},
+		{
+			"bufferView": 3,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 2840,
+			"max": [ 0.9997635, 1, 0.9986882, 1 ],
+			"min": [ -0.9997637, -1, -0.9986891, 1 ],
+			"type": "VEC4"
+		},
+		{
+			"bufferView": 0,
+			"byteOffset": 0,
+			"componentType": 5123,
+			"count": 4752,
+			"max": [ 2839 ],
+			"min": [ 0 ],
+			"type": "SCALAR"
+		}
+	],
+	"buffers": [
+		{
+			"byteLength": 145824,
+			"uri": "entity58724.bin"
+		}
+	],
+	"bufferViews": [
+		{
+			"buffer": 0,
+			"byteLength": 9504,
+			"target": 34963,
+			"byteOffset": 136320
+		},
+		{
+			"buffer": 0,
+			"byteLength": 22720,
+			"target": 34962,
+			"byteStride": 8,
+			"byteOffset": 0
+		},
+		{
+			"buffer": 0,
+			"byteLength": 68160,
+			"target": 34962,
+			"byteStride": 12,
+			"byteOffset": 22720
+		},
+		{
+			"buffer": 0,
+			"byteLength": 45440,
+			"target": 34962,
+			"byteStride": 16,
+			"byteOffset": 90880
+		}
+	],
+	"images": [
+		{
+			"uri": "Assets/Visuals/Materials/Textures/Hexagon_S_Albedo.png"
+		},
+		{
+			"uri": "Assets/Visuals/Materials/Textures/Hexagon_S_Emissive.jpg"
+		}
+	],
+	"materials": [
+		{
+			"pbrMetallicRoughness": {
+				"baseColorTexture" : {
+					"index" : 0,
+					"texCoord" : 0
+				},
+				"baseColorFactor": [1, 1, 1, 1],
+				"metallicFactor": 0,
+				"roughnessFactor": 1
+			},
+			"emissiveTexture" : {
+				"index" : 1,
+				"texCoord" : 0
+			},
+			"emissiveFactor": [0.36, 0.36, 0.36],
+			"doubleSided": false,
+			"name": "Hexagon_S_Mat"
+		}
+	],
+	"meshes": [
+		{
+			"name": "mesh_Hexagon_Floor_02_Small_Art_33742Hexagon_Floor_02_Small_Art",
+			"primitives": [
+				{
+					"attributes": {
+						"POSITION": 0,
+						"NORMAL": 1,
+						"TEXCOORD_0": 2,
+						"TANGENT": 3
+					},
+					"indices": 4,
+					"material": 0,
+					"mode": 4
+				}
+			]
+		}
+	],
+	"nodes": [
+		{
+			"name": "UnityGlTF_root",
+			"children": [
+				1
+			]
+		},
+		{
+			"name": "node_Hexagon_Floor_02_Small_Art",
+			"mesh": 0,
+			"matrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
+		}
+	],
+	"samplers": [
+		{
+			"magFilter": 9729,
+			"minFilter": 9985,
+			"wrapS": 10497,
+			"wrapT": 10497
+		}
+	],
+	"scenes": [
+		{
+			"name":"defaultScene",
+			"nodes": [
+				0
+			]
+		}
+	],
+	"scene": 0,
+	"textures": [
+		{
+			"sampler": 0,
+			"source": 0
+		},
+		{
+			"sampler": 0,
+			"source": 1
+		}
+	]
+}

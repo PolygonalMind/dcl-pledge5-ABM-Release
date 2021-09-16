@@ -1,0 +1,143 @@
+{
+	"asset": {
+		"generator": "Unity 2020.3.11f1",
+		"extras": {
+			"exporterVersion" : "2.2.1"
+		},
+		"version": "2.0"
+	},
+	"accessors": [
+		{
+			"bufferView": 2,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 452,
+			"max": [ -19.04282, 33.66592, 32.00399 ],
+			"min": [ -44.74706, 26.99818, -9.307086 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 2,
+			"byteOffset": 5424,
+			"componentType": 5126,
+			"count": 452,
+			"max": [ 0.9462008, 1, 1 ],
+			"min": [ -0.92386, -1, -1 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 1,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 452,
+			"max": [ 0.65625, 0.9790665 ],
+			"min": [ 0, 0 ],
+			"type": "VEC2"
+		},
+		{
+			"bufferView": 3,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 452,
+			"max": [ 1, 0, 0.8660264, 1 ],
+			"min": [ -1, 0, -0.866026, 1 ],
+			"type": "VEC4"
+		},
+		{
+			"bufferView": 0,
+			"byteOffset": 0,
+			"componentType": 5123,
+			"count": 816,
+			"max": [ 451 ],
+			"min": [ 0 ],
+			"type": "SCALAR"
+		}
+	],
+	"buffers": [
+		{
+			"byteLength": 23328,
+			"uri": "entity61100.bin"
+		}
+	],
+	"bufferViews": [
+		{
+			"buffer": 0,
+			"byteLength": 1632,
+			"target": 34963,
+			"byteOffset": 21696
+		},
+		{
+			"buffer": 0,
+			"byteLength": 3616,
+			"target": 34962,
+			"byteStride": 8,
+			"byteOffset": 0
+		},
+		{
+			"buffer": 0,
+			"byteLength": 10848,
+			"target": 34962,
+			"byteStride": 12,
+			"byteOffset": 3616
+		},
+		{
+			"buffer": 0,
+			"byteLength": 7232,
+			"target": 34962,
+			"byteStride": 16,
+			"byteOffset": 14464
+		}
+	],
+	"materials": [
+		{
+			"pbrMetallicRoughness": {
+				"baseColorFactor": [0.4, 0.4, 0.4, 1],
+				"metallicFactor": 0,
+				"roughnessFactor": 1
+			},
+			"emissiveFactor": [0, 0, 0],
+			"doubleSided": false,
+			"name": "Collider_Mat"
+		}
+	],
+	"meshes": [
+		{
+			"name": "mesh_Hexagon_Floor01_collider_34172Hexagon_Floor01_collider",
+			"primitives": [
+				{
+					"attributes": {
+						"POSITION": 0,
+						"NORMAL": 1,
+						"TEXCOORD_0": 2,
+						"TANGENT": 3
+					},
+					"indices": 4,
+					"material": 0,
+					"mode": 4
+				}
+			]
+		}
+	],
+	"nodes": [
+		{
+			"name": "UnityGlTF_root",
+			"children": [
+				1
+			]
+		},
+		{
+			"name": "node_Hexagon_Floor01_collider",
+			"mesh": 0,
+			"matrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
+		}
+	],
+	"scenes": [
+		{
+			"name":"defaultScene",
+			"nodes": [
+				0
+			]
+		}
+	],
+	"scene": 0
+}
