@@ -916,7 +916,7 @@ entity66662.getComponent(Transform).scale.set(1, 1, 1)
 entity66662.addComponent(new GLTFShape("unity_assets/entity66662.gltf"))
 entity66662.getComponent(GLTFShape).withCollisions = false
 entity66662.getComponent(Transform).rotation.set(0, 1, 0, -4.371139E-08)
-entity66662.addComponent(new Poap(entity66662, "ABMlaunch", false, null)) 
+entity66662.addComponent(new Poap(entity66662, "abm", false, null)) 
 var entity66656 = new Entity("POAP")
 entity66656.setParent(entity66650)
 entity66656.addComponent(new Transform({ position: new Vector3(0, 0, 0) }))
