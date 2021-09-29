@@ -1,17 +1,24 @@
-import { getUserPublicKey } from "@decentraland/Identity";
+import { getUserData, getUserPublicKey } from "@decentraland/Identity";
 import { HttpService } from "./httpService";
 
 // DCL helpers
 import * as eth from "@decentraland/EthereumController"
 
+
 export const URL_SERVER = 'https://v2.lowpolyhub.com:3000';
+//export const URL_SERVER_LOCAL = 'http://localhost:3000';
 const URL_LOGIN_ENDPOINT = `${URL_SERVER}/login`
+const IS_SIGNATURE_IN_HEX = true
+
+
 // Only used locally
 // Payload
 type UserInfoDCL = {
-    wallet: string;
-    signature: string;
-    from: string
+    wallet: string
+    signature: string
+    username: string
+    date: number
+    isHex: boolean
 }
 
 // Answers Types from REQUEST
@@ -35,7 +42,9 @@ export class UserService {
     loginInfo: UserInfoDCL = {
         wallet: '',
         signature: '',
-        from: 'DCL'
+        username: '',
+        date: 0,
+        isHex: IS_SIGNATURE_IN_HEX
     };
 
     private accessToken: string = null;
@@ -65,10 +74,23 @@ export class UserService {
     async loadUserInfo(): Promise<string> {
         //Public key of the user
         this.loginInfo.wallet = await getUserPublicKey()
+        this.loginInfo.date = Date.now()
+        const userdata = await getUserData()
+
+        this.loginInfo.username = ''
+        if (userdata && userdata.displayName) {
+            this.loginInfo.username = userdata.displayName
+        }
+        
+        
         // msg needed for sign - change to constant
         // Get signature
-        const msg = `# DCL Signed message
-            signed: true`
+        
+
+        const msg = (`# DCL Signed message\n`+
+        `    signed: true\n`+
+        `    date: `+this.loginInfo.date+``)
+
         const convertedMessage = await eth.convertMessageToObject(msg)
         try {
             const { signature } = await eth.signMessage(convertedMessage)
